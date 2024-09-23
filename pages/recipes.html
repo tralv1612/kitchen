@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipes</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/recipes.css">
+        
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id ="your-tree">Check your tree</li>
+            </ul>
+
+            <div id="square" onclick="togglePopup()">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diet-->
+        <div class="diet">
+            <!-- item 1-->
+            <div class="item">
+                <img id="image-2" src="../images/recipes_1.png" alt="diet">
+                <strong> Daily diet</strong>
+            </div>
+            <!-- item 2-->
+            <div class="item">
+                <img id="image-2" src="../images/recipes_2.png" alt="diet">
+                <strong> Vagetarian diet </strong>
+            </div>
+            <!-- item 3-->
+            <div class="item">
+                <img id="image-2" src="../images/recipes_3.png" alt="diet">
+                <strong> Dietary</strong>
+            </div>
+            <!-- item 4-->
+            <div class="item">
+                <img id="image-2" src="../images/recipes_4.png" alt="diet">
+                <strong> Excercise diet</strong>
+            </div>
+        </div>
+
+        <!-- forum -->
+        <img id="image-forum" src="../images/forum.png" alt="Forum">
+        <button id = "button-forum"> GO TO FORUM</button>
+
+         <!-- information -->    
+         <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+        
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+
+        <script src="../js/recipes.js"></script>
+    </body>
+</html>
+        

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kitchen Buddy</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/for_you.css">
+        
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id = "your-tree">Check your tree</li>
+            </ul>
+
+            <div id="square" onclick="togglePopup()">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <!-- menu -->
+        <div class="menu">
+            <!-- item 1-->
+            <div class="item">
+                <img id="image-2" src="../images/chatbot.jfif" alt="Logo">
+                <strong> Expert room</strong>
+                <p>Chat with our AI assistant to receive personalized diet recommendations and workout plans tailored to your needs.</p>
+            </div>
+            <!-- item 2-->
+            <div class="item">
+                <img id="image-2" src="../images/ibm.png" alt="Logo">
+                <strong> Find your BMI</strong>
+                <p>Improve your overall health by using our body data tracking feature to monitor your progress and make informed decisions about your diet.</p>
+            </div>
+            <!-- item 3-->
+            <div class="item">
+                <img id="image-2" src="../images/menu.png" alt="Logo">
+                <strong> Design your own plan</strong>
+                <p>Enjoy a diverse selection of healthy meal plans, featuring new recipes added daily to keep your meals exciting.</p>
+            </div>
+            <!-- item 4-->
+            <div class="item">
+                <img id="image-2" src="../images/calo.png" alt="Logo">
+                <strong> Calorie calculation</strong>
+                <p>We provide you to solve the problem of calculating the amount of calories consumed, you can easily control and calculate the calories in each meal.</p>
+            </div>
+            <!-- item 5-->
+            <div class="item">
+                <img id="image-2" src="../images/quick_food.png" alt="Logo">
+                <strong> Quick food selection</strong>
+                <p>Our interactive tool allows you to design personalized meal plans and create custom recipes. Get healthy ingredient suggestions to enhance your dishes.</p>
+            </div>
+            <!-- item 6-->
+            <div class="item">
+                <img id="image-2" src="../images/estimate.png" alt="Logo">
+                <strong> Estimate the cost for meal</strong>
+                <p>Easily optimize your meal budget and monitor your daily or monthly food expenses with this convenient feature. It's tailored to your financial goals.</p>
+            </div>
+        </div>
+        
+        <!-- forum -->
+        <img id="image-forum" src="../images/forum.png" alt="Forum">
+        <button id = "button-forum"> GO TO FORUM</button>
+
+         <!-- information -->    
+         <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+        
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+
+        <script src="../js/for_you.js"></script>
+    </body>
+</html>

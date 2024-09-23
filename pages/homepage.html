@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kitchen Buddy</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/homepage.css">
+        
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id = "your-tree">Check your tree</li>
+            </ul>
+
+            <div id="square" onclick="togglePopup()">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                        <li><a href="../pages/change-ps.html">Change password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- element 1-->
+        <div class = element-1>
+            <img id="image-1" src="../images/image_1.jfif" alt="Logo">
+            <div class = "text-1">
+                <strong> ABOUT US</strong>
+                <p>Welcome to Kitchen Buddy - Your ultimate cooking companion.
+                    Our website is designed to help you learn how to cook delicious and healthy meals, while providing you with many creative features to support your wellness journey.
+                    This professional cooking tutorial website helps you not only learn how to cook but also improve your health effectively. With a mission to provide users with delicious and nutritious recipes, Kitchen Buddy is the ideal companion on your culinary journey.
+                </p>
+                </div>
+        </div>
+
+        <!-- element 2-->
+        <div class="element-2" >
+            <div id = "why-choosing">
+                <strong> Why choosing Us</strong>
+                <p>At Kitchen Buddy, we understand that everyone's health and fitness goals are unique. And health is crucial for optimal learning and work. That's why we offer a variety of features to support you every step of the way, including:</p>
+            </div>
+            
+            <div class="menu">
+                <!-- item 1-->
+                <div class="item">
+                    <img id="image-2" src="../images/chatbot.jfif" alt="Logo">
+                    <strong> Expert room</strong>
+                    <p>Chat with our AI assistant to receive personalized diet recommendations and workout plans tailored to your needs.</p>
+                </div>
+                <!-- item 2-->
+                <div class="item">
+                    <img id="image-2" src="../images/ibm.png" alt="Logo">
+                    <strong> Find your BMI</strong>
+                    <p>Improve your overall health by using our body data tracking feature to monitor your progress and make informed decisions about your diet.</p>
+                </div>
+                <!-- item 3-->
+                <div class="item">
+                    <img id="image-2" src="../images/menu.png" alt="Logo">
+                    <strong> Design your own plan</strong>
+                    <p>Enjoy a diverse selection of healthy meal plans, featuring new recipes added daily to keep your meals exciting.</p>
+                </div>
+                <!-- item 4-->
+                <div class="item">
+                    <img id="image-2" src="../images/calo.png" alt="Logo">
+                    <strong> Calorie calculation</strong>
+                    <p>We provide you to solve the problem of calculating the amount of calories consumed, you can easily control and calculate the calories in each meal.</p>
+                </div>
+                <!-- item 5-->
+                <div class="item">
+                    <img id="image-2" src="../images/quick_food.png" alt="Logo">
+                    <strong> Quick food selection</strong>
+                    <p>Our interactive tool allows you to design personalized meal plans and create custom recipes. Get healthy ingredient suggestions to enhance your dishes.</p>
+                </div>
+                <!-- item 6-->
+                <div class="item">
+                    <img id="image-2" src="../images/estimate.png" alt="Logo">
+                    <strong> Estimate the cost for meal</strong>
+                    <p>Easily optimize your meal budget and monitor your daily or monthly food expenses with this convenient feature. It's tailored to your financial goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- element 3-->
+        <div class="element-3">
+            <img src="../images/image_2.png" alt="Site image" style="width:100%;">
+        </div>
+
+        <!-- element 4-->
+        <div class = element-4>
+            <div class = "forum">
+                <p id = "text-4-1">A place for sharing</p>
+                <p id = "text-4-2">And rating recipes...</p>
+                <button id = "button-forum"> GO TO FORUM</button>
+            </div>
+
+            <img id="image-forum" src="../images/forum.png" alt="Forum">
+        </div>
+
+
+        <!-- register -->
+        <div class="register">
+            <strong>Join membership!</strong>
+            <p>Create an account and enjoy your cooking</p>
+            
+            <input type="text" placeholder="Email" id="email">
+            <input type="text" placeholder="Yourname" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Confirm password" id="cf-password">
+            <button id="button-login">Sign up</button>
+        </div>
+
+        <!-- Pop-up cho mã xác thực -->
+        <div id="verify-popup" style="display: none;">
+            <p>Nhập mã xác thực đã được gửi đến email của bạn:</p>
+            <input type="text" id="verifyCode" placeholder="Mã xác thực">
+            <button id="button-verify">Xác nhận mã</button>
+        </div>
+
+        <!-- information -->    
+        <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+
+        <script src="../js/homepage.js"></script>
+        <script src="../js/register.js"></script>
+    </body>
+</html>

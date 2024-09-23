@@ -1,0 +1,216 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fffcef;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+/* CSS for Navbar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ec8a53;
+    height: 120px;
+}
+
+#logo {
+    width: 180px; /* Tùy chỉnh kích thước logo */
+    height: auto;
+    padding-left: 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin-left: 70px;
+    padding: 0;
+    color: white;
+}
+
+.nav-item {
+    margin-right: 80px; /* Khoảng cách giữa các mục menu */
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 0 10px; /* Optional: Add some padding for better spacing */
+    height: 120px;
+}
+
+.nav-item:hover {
+    text-decoration: underline; /* Hiệu ứng hover */
+    background-color: #683131;
+}
+
+#recipes {
+    text-decoration: underline; /* Hiệu ứng hover */
+    background-color: #683131;
+}
+
+#square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 136px; /* Kích thước của hình vuông */
+    height: 120px;
+    
+    margin-right: 20px;
+}
+
+#square:hover {
+    background-color: #FDF4CC; /* Màu nền của hình vuông */
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px; /* Kích thước của hình tròn */
+    height: 87px;
+    background-color: #822f00; /* Màu nền của hình tròn */
+    border-radius: 50%;
+}
+
+/* Pop-up styles */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 244, 244, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    top: 120px;
+    right: 10px;
+}
+
+#popup ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#popup ul li {
+    margin: 10px 0;
+}
+
+#popup ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+/* Hide pop-up by default */
+.hidden {
+    display: none !important;
+}
+
+.fas {
+    font-size: 50px; /* Kích thước của icon */
+    color: white; /* Màu của icon */
+}
+
+/* forum */
+#image-forum {
+    width: 30%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#button-forum {
+    width: 20%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 20px;
+    border-radius: 35px;
+    background-color: #ec8a53;
+    color: #FDF4CC;
+}
+
+#button-forum:hover {
+    background-color: #eb6f27;
+}
+
+/* diet */
+.diet {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các item tự động xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các item */
+    justify-content: space-around; /* Phân phối đều các item */
+    margin: 100px 200px;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Canh giữa các item theo chiều ngang */
+    text-align: center; /* Canh giữa văn bản */
+    width: 700px;
+    height: auto;
+}
+
+.item img {
+    width: 700px;
+}
+
+.item strong {
+    position: absolute; /* Đặt vị trí tuyệt đối cho văn bản */
+    top: 50%; /* Canh giữa theo chiều dọc */
+    left: 50%; /* Canh giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Điều chỉnh vị trí để canh giữa */
+    color: white; /* Đặt màu chữ */
+    padding: 5px; /* Thêm khoảng cách bên trong cho văn bản */
+    font-size: 40px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Tạo hiệu ứng đổ bóng cho chữ */
+}
+
+
+/* information */
+.information {
+    display: flex;
+    justify-content: space-around; /* Căn đều các mục với khoảng cách giữa */
+    align-items: flex-start; /* Căn theo trục dọc từ trên xuống */
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+#logo-2 {
+    width: 100px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+    margin-right: 200px; /* Khoảng cách giữa logo và các mục */
+    flex: 1;
+}
+
+.info-item {
+    flex: 4; /* Chia đều không gian giữa các mục */
+    padding: 100 10px; /* Khoảng cách bên trong giữa các item */
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 10px; /* Tạo khoảng cách dưới phần tiêu đề */
+    text-decoration: underline;
+}
+
+.info-item p {
+    margin: 5px 0; /* Điều chỉnh khoảng cách giữa các dòng */
+}

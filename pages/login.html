@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kitchen Buddy Login</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/login.css">
+        
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id ="your-tree">Check your tree</li>
+            </ul>
+
+            <div class="square">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- login -->
+        <div class="image-container">
+            <img src="../images/3681625.jpg" alt="login_form" class="img-form-login">
+        
+            <div class="form-overlay">
+                <p style="color: #822f00; font-size: 32px; margin: 20px;"> Login </p>
+                <input type="text" placeholder="Username" id="username">
+                <input type="password" placeholder="Password" id="password">
+                <select name="Role" id="role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button id="button-login">Đăng nhập</button>
+                <div class="social">
+                    <button type="button" class="google-login"><i class="fab fa-google"></i> Login with Google</button>
+                </div>
+                <div class="additional-buttons">
+                    <button type="button" id="forgot-password">Quên mật khẩu</button>
+                    <button type="button" id="register">Tạo tài khoản</button>
+                </div>
+            </div>
+        </div>
+        
+         <!-- information -->    
+         <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+        
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+        
+        <script src="../js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,215 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fffcef;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+/* CSS for Navbar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ec8a53;
+    height: 120px;
+}
+
+#logo {
+    width: 180px; /* Tùy chỉnh kích thước logo */
+    height: auto;
+    padding-left: 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin-left: 70px;
+    padding: 0;
+    color: white;
+}
+
+.nav-item {
+    margin-right: 80px; /* Khoảng cách giữa các mục menu */
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 0 10px; /* Optional: Add some padding for better spacing */
+    height: 120px;
+}
+
+.nav-item:hover {
+    text-decoration: underline; /* Hiệu ứng hover */
+    background-color: #683131;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 136px; /* Kích thước của hình vuông */
+    height: 120px;
+    
+    margin-right: 20px;
+}
+
+.square:hover {
+    background-color: #FDF4CC; /* Màu nền của hình vuông */
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px; /* Kích thước của hình tròn */
+    height: 87px;
+    background-color: #822f00; /* Màu nền của hình tròn */
+    border-radius: 50%;
+}
+
+.fas {
+    font-size: 50px; /* Kích thước của icon */
+    color: white; /* Màu của icon */
+}
+
+
+/* login form */
+
+.image-container {
+    position: relative;
+    width: 800px; /* Điều chỉnh kích thước phù hợp */
+    height: 600px; /* Điều chỉnh kích thước phù hợp */
+    margin: 50px auto;
+
+}
+
+.img-form-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 35px;
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#username,
+#password, select {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 35px;
+    border: 1px solid #ccc;
+}
+
+#button-login {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.button-login:hover {
+    background-color: #5ba4f1;
+}
+
+.social {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.google-login {
+    padding: 10px 20px;
+    background-color: #dd4b39;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.additional-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.additional-buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#forgot-password {
+    background-color: #f0ad4e;
+    color: white;
+    margin-left: 60px;
+    width: 150px;
+}
+
+#register {
+    background-color: #5cb85c;
+    color: white;
+    margin-right: 60px;
+    width: 150px;
+}
+
+
+/* information */
+.information {
+    display: flex;
+    justify-content: space-around; /* Căn đều các mục với khoảng cách giữa */
+    align-items: flex-start; /* Căn theo trục dọc từ trên xuống */
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+#logo-2 {
+    width: 100px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+    margin-right: 200px; /* Khoảng cách giữa logo và các mục */
+    flex: 1;
+}
+
+.info-item {
+    flex: 4; /* Chia đều không gian giữa các mục */
+    padding: 100 10px; /* Khoảng cách bên trong giữa các item */
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 10px; /* Tạo khoảng cách dưới phần tiêu đề */
+    text-decoration: underline;
+}
+
+.info-item p {
+    margin: 5px 0; /* Điều chỉnh khoảng cách giữa các dòng */
+}
+
