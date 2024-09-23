@@ -15,7 +15,7 @@ async function handleLogin(event) {
             };
 
             // Gửi request đến API với method POST
-            const response = await fetch('http://www.kitchenbuddy.somee.com/api/v1/authenticate/register', {
+            const response = await fetch('https://www.kitchenbuddy.somee.com/api/v1/authenticate/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

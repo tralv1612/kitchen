@@ -27,13 +27,13 @@ async function handleLogin(event) {
     // Đặt URL API dựa trên role
     let url = '';
     if (role === 'user') {
-        url = 'http://www.kitchenbuddy.somee.com/api/v1/authenticate/user/login';
+        url = 'https://www.kitchenbuddy.somee.com/api/v1/authenticate/user/login';
         requestData = {
             email: username,
             password: password
         };
     } else if (role === 'admin') {
-        url = 'http://www.kitchenbuddy.somee.com/api/v1/authenticate/admin/login';
+        url = 'https://www.kitchenbuddy.somee.com/api/v1/authenticate/admin/login';
         requestData = {
             account: username,
             password: password

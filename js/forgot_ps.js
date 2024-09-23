@@ -1,6 +1,6 @@
 document.getElementById('button-login').onclick = function() {
     const email = document.getElementById('email').value;
-    fetch('http://www.kitchenbuddy.somee.com/api/v1/authenticate/recover', {
+    fetch('https://www.kitchenbuddy.somee.com/api/v1/authenticate/recover', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
