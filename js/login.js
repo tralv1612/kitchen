@@ -52,13 +52,8 @@ async function handleLogin(event) {
 
         // Kiểm tra status code của response
         if (response.status >= 200 && response.status < 300) {
-            const data = await response.json(); // Lấy dữ liệu trả về từ API
-            // Đặt thời gian sống của cookie (ví dụ 1 ngày = 86400 giây)
-            const maxAge = 86400; // 1 ngày (được tính bằng giây)
-
-            // Lưu các giá trị vào cookie với max-age là 1 ngày
-            document.cookie = `userId=${data.userId}; max-age=${maxAge}; path=/;`;
-            document.cookie = `email=${data.email}; max-age=${maxAge}; path=/;`;
+            const data = await response.json();
+            sessionStorage.setItem('account', JSON.stringify(data));
             // Chuyển hướng đến trang chính
             window.location.href = "../pages/homepage.html";
         } else {
