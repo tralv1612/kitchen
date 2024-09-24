@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="../css/bmi.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         
     </head>
     
@@ -39,8 +40,33 @@
         </div>
         
         <!-- BMI -->
-        <strong> Find your BMI</strong>
-        <img id="image-bmi" src="../images/bmi.png" alt="BMI">
+        <div class = "container">
+            <a href="../pages/for_you.html" class="back-icon">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <strong> Find your BMI</strong>
+            <img id="image-bmi" src="../images/bmi.png" alt="BMI">
+        </div>
+        
+        <div class = "container2">
+            <div class="bmi-container">
+                <h2>Calculate BMI</h2>
+                <div class="input-row">
+                    <div class="input-container">
+                        <label for="height">Height ( cm )</label>
+                        <input type="number" id="height" placeholder="Type your height...">
+                    </div>
+                    <div class="input-container">
+                        <label for="weight">Weight ( kg )</label>
+                        <input type="number" id="weight" placeholder="Type your weight...">
+                    </div>
+                </div>
+                <button id="calculate-btn">Result</button>
+            </div>
+        </div>
+
+        <!-- Vị trí để kết quả hiển thị -->
+        <div id="bmi-result"></div>
 
         <!-- forum -->
         <img id="image-forum" src="../images/forum.png" alt="Forum">

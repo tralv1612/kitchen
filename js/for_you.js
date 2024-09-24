@@ -6,6 +6,27 @@ document.getElementById("about-us").addEventListener("click", function() {
     window.location.href = "../pages/homepage.html";
 });
 
+//bmi//
+document.getElementById("bmi").addEventListener("click", function() {
+    window.location.href = "../pages/bmi.html";
+});
+//chat
+document.getElementById("chat").addEventListener("click", function() {
+    window.location.href = "../pages/chat.html";
+});
+//select
+document.getElementById("plan").addEventListener("click", function() {
+    window.location.href = "../pages/plan.html";
+});
+//calo
+document.getElementById("calo").addEventListener("click", function() {
+    window.location.href = "../pages/calo.html";
+});
+//cost
+document.getElementById("cost").addEventListener("click", function() {
+    window.location.href = "../pages/cost.html";
+});
+
 function togglePopup() {
     const overlay = document.getElementById('popup-overlay');
     overlay.classList.toggle('hidden');
