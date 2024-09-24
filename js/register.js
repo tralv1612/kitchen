@@ -58,7 +58,7 @@ async function handleLogin(event) {
             }
         } catch (error) {
             // In ra thông báo lỗi nếu có lỗi trong quá trình fetch
-            console.error('Đã xảy ra lỗi:', error);
+            console.error('Something went wrong:', error);
             alert('Something went wrong. Please try again.');
         }
     } else {

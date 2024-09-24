@@ -135,14 +135,14 @@ body {
 #image-1 {
     width: 567px;
     height: 378px;
-    margin-right: 200px; /* Thêm khoảng cách giữa ảnh và văn bản */
+    margin-right: 50px; /* Thêm khoảng cách giữa ảnh và văn bản */
     margin-left: 100px;
     border-radius: 15px;
 }
 
 .text-1 {
     flex-grow: 1; /* Để văn bản chiếm phần còn lại của không gian */
-    margin-right: 250px;
+    margin-right: auto;
 }
 
 #why-choosing, .element-1 strong {
@@ -199,7 +199,7 @@ p {
 #why-choosing {
     width: 50%; /* Adjust the width as needed */
     height: 130px; /* Adjust the height as needed */
-    margin: 50px 100px 20px 500px; /* Centers the div horizontally */
+    margin: 50px auto; /* Centers the div horizontally */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
     text-align: center; /* Centers the text inside the div */
