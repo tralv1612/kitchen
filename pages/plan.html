@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find your BMI</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/plan.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id = "your-tree">Check your tree</li>
+            </ul>
+
+            <div id="square" onclick="togglePopup()">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- plan -->
+        <div class = "container">
+            <a href="../pages/for_you.html" class="back-icon">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <strong> Design your own plan</strong>
+            <img id="image-bmi" src="../images/plan.png" alt="BMI">
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Dinner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                        <td><input type="text" placeholder="Enter meal"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="submit-btn">Submit</button>
+        </div>
+
+        <!-- forum -->
+        <img id="image-forum" src="../images/forum.png" alt="Forum">
+        <button id = "button-forum"> GO TO FORUM</button>
+
+         <!-- information -->    
+         <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+        
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+
+        <script src="../js/plan.js"></script>
+    </body>
+</html>

@@ -124,7 +124,7 @@ body {
     color: white; /* Màu của icon */
 }
 
-/* find bmi */
+/* membership plan */
 /* CSS cho phần nội dung bên dưới navbar */
 .container {
     margin-top: 100px; /* Khoảng cách từ phần navbar phía trên */
@@ -159,78 +159,19 @@ body {
     margin-bottom: 3%;
 }
 
-#image-bmi {
-    display: block;
-    width: 86%;
-    margin: 0 auto; /* Đặt ảnh vào giữa màn hình */
-}
-
 .container2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; /* Chiều cao tối đa của container để căn giữa */
+    flex-wrap: wrap;
+    gap: 100px; /* Khoảng cách giữa các ảnh */
+    justify-content: center; /* Căn giữa các ảnh */
 }
 
-.bmi-container {
-    background-color: #fdf4cc;
-    width: 80%;
-    height: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.container2 img {
+    width: 30%;
+    height: auto;
+    flex: 0 0 30%; /* Đảm bảo ảnh giữ nguyên kích thước 30% */
 }
 
-h2 {
-    color: #9b4b07;
-    margin-bottom: 20px;
-}
-
-.input-row {
-    display: flex;
-    justify-content: space-between; /* Đảm bảo khoảng cách giữa các ô */
-    gap: 20px; /* Khoảng cách giữa hai ô nhập */
-    margin-bottom: 25px;
-}
-
-.input-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #f69365;
-}
-
-input {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border: 2px solid #f69365;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #fff;
-}
-
-button {
-    background-color: #ff8d54;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff7042;
-}
 
 /* information */
 .information {
@@ -287,24 +228,3 @@ button:hover {
 #button-forum:hover {
     background-color: #eb6f27;
 }
-
-.result-display {
-    background-color: #fdf4cc;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    width: 50%;
-    margin: 0 auto; /* Căn giữa theo chiều ngang */
-    color: #f69365;
-}
-.result-display p {
-    margin: 10px 0;
-}
-.result-display ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-.result-display li {
-    margin: 5px 0;
-}
-
