@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kitchen Buddy Login</title>
+        <title>Find your BMI</title>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/bmi.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         
     </head>
     
@@ -19,40 +20,42 @@
                 <li class="nav-item" id = "about-us">About us</li>
                 <li class="nav-item" id = "recipes">Recipes</li>
                 <li class="nav-item" id = "for-you">For you</li>
-                <li class="nav-item" id ="your-tree">Check your tree</li>
+                <li class="nav-item" id = "your-tree">Check your tree</li>
             </ul>
 
-            <div class="square">
+            <div id="square" onclick="togglePopup()">
                 <div class="circle">
                     <i class="fas fa-user"></i>
                 </div>
             </div>
-        </div>
-
-        <!-- login -->
-        <div class="image-container">
-            <img src="../images/3681625.jpg" alt="login_form" class="img-form-login">
-        
-            <div class="form-overlay">
-                <p style="color: #822f00; font-size: 32px; margin: 20px;"> Login </p>
-                <input type="text" placeholder="Username" id="username">
-                <input type="password" placeholder="Password" id="password">
-                <select name="Role" id="role">
-                    <option value="user">User</option>
-                    <option value="expert">Expert</option>
-                    <option value="admin">Admin</option>
-                </select>
-                <button id="button-login">Đăng nhập</button>
-                <div class="social">
-                    <button type="button" class="google-login"><i class="fab fa-google"></i> Login with Google</button>
-                </div>
-                <div class="additional-buttons">
-                    <button type="button" id="forgot-password">Quên mật khẩu</button>
-                    <button type="button" id="register">Tạo tài khoản</button>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         
+        <!-- Daily diet -->
+        <div class = "container">
+            <a href="../pages/recipes.html" class="back-icon">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <strong> Daily Diet</strong>
+            <img id="image-bmi" src="../images/daily_diet.png" alt="BMI">
+        </div>
+        
+        <div id="recipe-container" class="recipe-container"></div>
+            <!-- Recipes will be loaded here -->
+        </div>
+
+        <!-- forum -->
+        <img id="image-forum" src="../images/forum.png" alt="Forum">
+        <button id = "button-forum"> GO TO FORUM</button>
+
          <!-- information -->    
          <div class="information">
             <img id="logo-2" src="../images/logo.png" alt="Logo">
@@ -80,7 +83,8 @@
                 <p>Rules for posting recipes</p>
             </div>
         </div>
-        
-        <script src="../js/login.js"></script>
+
+        <script src="../js/bmi.js"></script>
+        <script src="../js/daily_diet.js"></script>
     </body>
 </html>

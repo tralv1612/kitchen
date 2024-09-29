@@ -32,7 +32,16 @@ async function handleLogin(event) {
             email: username,
             password: password
         };
-    } else if (role === 'admin') {
+    } 
+    
+    else if (role === 'expert') {
+        url = 'https://www.kitchenbuddy.somee.com/api/v1/authenticate/expert/login';
+        requestData = {
+            email: username,
+            password: password
+        };
+    }
+    else if (role === 'admin') {
         url = 'https://www.kitchenbuddy.somee.com/api/v1/authenticate/admin/login';
         requestData = {
             account: username,
@@ -55,7 +64,10 @@ async function handleLogin(event) {
             const data = await response.json();
             sessionStorage.setItem('account', JSON.stringify(data));
             // Chuyển hướng đến trang chính
-            window.location.href = "../pages/homepage.html";
+            if (role === 'user') {
+                window.location.href = "../pages/homepage.html";}
+            else if (role === 'expert') {
+                window.location.href = "../pages/exper_homepage.html";}
         } else {
             // In ra thông báo lỗi
             alert('Incorrect email or password.');

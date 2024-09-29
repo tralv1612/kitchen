@@ -112,7 +112,7 @@ body {
     z-index: 2;
 }
 
-#username,
+#username, select,
 #password, #cf-password,
 #email,
 #code {

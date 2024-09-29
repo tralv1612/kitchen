@@ -169,12 +169,16 @@ body {
     background-color: #fff8dc;
     padding: 20px;
     border-radius: 8px;
+    height: 800px;
+    margin: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
+    height: 90%;
+    margin-top: 20px;
 }
 
 th, td {
@@ -193,6 +197,7 @@ th {
 
 td input {
     width: 90%;
+    height: 45px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -208,6 +213,36 @@ td:first-child {
 thead th:first-child {
     background-color: transparent;
     border: none;
+}
+
+h3 {
+    height: 50px; /* Đặt chiều cao */
+    width: 50%; /* Đặt chiều rộng */
+    margin: auto;
+    font-size: 40px;
+    text-align: center; /* Căn giữa văn bản */
+    color: #822F00; /* Đặt màu chữ */
+    background-color: #FFD361; /* Đặt màu nền */
+    border-radius: 15px;
+}
+
+
+#submit-btn {
+    height: 50px; /* Đặt chiều cao cho button */
+    width: 100px; /* Đặt chiều rộng nếu cần */
+    display: block; /* Để căn giữa theo chiều ngang */
+    margin: 20px auto; /* margin auto để căn giữa theo chiều ngang */
+    background-color: #4CAF50; /* Màu nền (tùy chọn) */
+    color: white; /* Màu chữ (tùy chọn) */
+    border: none; /* Bỏ đường viền */
+    border-radius: 5px; /* Làm tròn góc */
+    cursor: pointer; /* Con trỏ khi hover */
+    text-align: center; /* Đảm bảo text được căn giữa */
+    font-size: 16px; /* Cỡ chữ */
+}
+
+#submit-btn:hover {
+    background-color: #45a049; /* Màu khi hover (tùy chọn) */
 }
 
 /* information */
