@@ -24,7 +24,7 @@ document.getElementById("calo").addEventListener("click", function() {
 });
 //cost
 document.getElementById("cost").addEventListener("click", function() {
-    window.location.href = "../pages/cost.html";
+    window.location.href = "../pages/estimate.html";
 });
 
 function togglePopup() {

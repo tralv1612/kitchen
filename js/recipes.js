@@ -19,3 +19,19 @@ window.onclick = function(event) {
         overlay.classList.add('hidden');
     }
 };
+
+document.getElementById("daily-diet").addEventListener("click", function() {
+    window.location.href = "daily_diet.html";
+});
+
+document.getElementById("vagetarian-diet").addEventListener("click", function() {
+    window.location.href = "vagetarian_diet.html";
+});
+
+document.getElementById("dietary").addEventListener("click", function() {
+    window.location.href = "dietary.html";
+});
+
+document.getElementById("excercise-diet").addEventListener("click", function() {
+    window.location.href = "excercise_diet.html";
+});

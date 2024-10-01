@@ -30,7 +30,6 @@ function displayRecipes(recipes) {
         // Add image
         const img = document.createElement('img');
         img.classList.add('recipe-image');
-        alert(recipe.imageUrl)
         img.src = recipe.imageUrl || 'default-image.png'; // Replace with default image if none is provided
         img.alt = recipe.title;
 
