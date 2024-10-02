@@ -25,7 +25,7 @@ document.getElementById("daily-diet").addEventListener("click", function() {
 });
 
 document.getElementById("vagetarian-diet").addEventListener("click", function() {
-    window.location.href = "vagetarian_diet.html";
+    window.location.href = "vegetarian_diet.html";
 });
 
 document.getElementById("dietary").addEventListener("click", function() {
