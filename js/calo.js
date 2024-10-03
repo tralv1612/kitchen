@@ -50,7 +50,7 @@ document.getElementById('estimate-btn').addEventListener('click', function() {
         .then(response => response.json())
         .then(data => {
             const priceInfo = document.getElementById('price-info');
-            priceInfo.textContent = `The dish ${data.title} costs from ${data.fromPrice} to ${data.toPrice} VND.`;
+            priceInfo.textContent = `The dish ${data.title} calories from ${data.fromCalories} to ${data.toCalories} Calories.`;
         })
         .catch(error => console.error('Error fetching estimate:', error));
 });

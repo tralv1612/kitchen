@@ -26,6 +26,7 @@ function displayRecipes(recipes) {
         // Create the recipe card
         const recipeCard = document.createElement('div');
         recipeCard.classList.add('recipe-card');
+        recipeCard.dataset.recipeId = recipe.recipeId;
 
         // Add image
         const img = document.createElement('img');
@@ -48,6 +49,12 @@ function displayRecipes(recipes) {
         recipeCard.appendChild(title);
         recipeCard.appendChild(description);
 
+        // Add event listener for clicking on the recipe card
+        recipeCard.addEventListener('click', () => {
+            const recipeId = recipeCard.dataset.recipeId;
+            window.location.href = `recipe-details.html?recipeId=${recipeId}`;
+        });
+        
         // Append recipe card to the container
         recipeContainer.appendChild(recipeCard);
     });

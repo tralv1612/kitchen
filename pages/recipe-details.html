@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="../css/recipes.css">
-        
+        <link rel="stylesheet" href="../css/recipe-details.css">
     </head>
     
     <body>
@@ -38,29 +38,11 @@
             </div>
         </div>
 
-        <!-- Diet-->
-        <div class="diet">
-            <!-- item 1-->
-            <div class="item" id="daily-diet">
-                <img id="image-2" src="../images/recipes_1.png" alt="diet">
-                <strong> Daily diet</strong>
-            </div>
-            <!-- item 2-->
-            <div class="item" id="vagetarian-diet">
-                <img id="image-2" src="../images/recipes_2.png" alt="diet">
-                <strong> Vegetarian diet </strong>
-            </div>
-            <!-- item 3-->
-            <div class="item" id="dietary">
-                <img id="image-2" src="../images/recipes_3.png" alt="diet">
-                <strong> Dietary</strong>
-            </div>
-            <!-- item 4-->
-            <div class="item" id="excercise-diet">
-                <img id="image-2" src="../images/recipes_4.png" alt="diet">
-                <strong> Exercise diet</strong>
-            </div>
-        </div>
+        <a href="../pages/recipes.html" class="back-icon">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <div id="recipe-details"></div>
 
         <!-- forum -->
         <img id="image-forum" src="../images/forum.png" alt="Forum">
@@ -93,6 +75,71 @@
                 <p>Rules for posting recipes</p>
             </div>
         </div>
+
+        <script>
+            // Function to get recipeId from URL
+            function getRecipeIdFromUrl() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('recipeId');
+            }
+    
+            // Function to fetch recipe details by ID
+            function getRecipeDetails(recipeId) {
+                const apiUrl = `https://www.kitchenbuddy.somee.com/api/v1/recipes/details/${recipeId}`;
+                
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        displayRecipeDetails(data);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching recipe details:', error);
+                    });
+            }
+    
+            // Function to display recipe details
+            function displayRecipeDetails(recipe) {
+                const detailsContainer = document.getElementById('recipe-details');
+                detailsContainer.innerHTML = ''; // Clear previous content
+    
+                // Add title
+                const title = document.createElement('h2');
+                title.textContent = recipe.title;
+                detailsContainer.appendChild(title);
+    
+                // Add image
+                const img = document.createElement('img');
+                img.src = recipe.imageUrl;
+                img.alt = recipe.title;
+                img.style.width = '100%';
+                detailsContainer.appendChild(img);
+    
+                // Add ingredients
+                const ingredients = document.createElement('p');
+                ingredients.innerHTML = `Nguyên liệu:<br> ${recipe.ingredient.replace(/\n/g, '<br>')}`;
+                detailsContainer.appendChild(ingredients);
+    
+                // Add tutorial steps
+                const steps = document.createElement('h3');
+                steps.innerHTML = `Các bước:`;
+                detailsContainer.appendChild(steps);
+                const tutorialList = document.createElement('ul');
+                recipe.tutorialDto.forEach(step => {
+                    const stepItem = document.createElement('li');
+                    stepItem.textContent = `${step.stepTile}: ${step.stepContent}`;
+                    tutorialList.appendChild(stepItem);
+                });
+                detailsContainer.appendChild(tutorialList);
+            }
+    
+            // Get recipeId from URL and fetch recipe details
+            const recipeId = getRecipeIdFromUrl();
+            if (recipeId) {
+                getRecipeDetails(recipeId);
+            } else {
+                console.error('No recipeId found in URL');
+            }
+        </script>
 
         <script src="../js/recipes.js"></script>
         <!--Start of Tawk.to Script-->
