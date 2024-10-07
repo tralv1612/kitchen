@@ -6,6 +6,10 @@ document.getElementById("about-us").addEventListener("click", function() {
     window.location.href = "../pages/homepage.html";
 });
 
+document.getElementById("for-you").addEventListener("click", function() {
+    window.location.href = "../pages/for_you.html";
+});
+
 function togglePopup() {
     const overlay = document.getElementById('popup-overlay');
     overlay.classList.toggle('hidden');
