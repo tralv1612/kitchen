@@ -14,13 +14,17 @@ document.getElementById("bmi").addEventListener("click", function() {
 document.getElementById("chat").addEventListener("click", function() {
     window.location.href = "../pages/chat.html";
 });
-//select
+//plan
 document.getElementById("plan").addEventListener("click", function() {
     window.location.href = "../pages/plan.html";
 });
 //calo
 document.getElementById("calo").addEventListener("click", function() {
     window.location.href = "../pages/calo.html";
+});
+//select
+document.getElementById("select").addEventListener("click", function() {
+    window.location.href = "../pages/select.html";
 });
 //cost
 document.getElementById("cost").addEventListener("click", function() {

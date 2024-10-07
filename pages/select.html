@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Vegetarian Diet</title>
+        <title>Calories calculation</title>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="../css/daily_diet.css">
+        <link rel="stylesheet" href="../css/select.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         
     </head>
@@ -41,18 +41,64 @@
             </div>
         </div>
         
-        <!-- Daily diet -->
+        <!-- Selection -->
         <div class = "container">
-            <a href="../pages/recipes.html" class="back-icon">
+            <a href="../pages/for_you.html" class="back-icon">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <strong> Vegetarian Diet</strong>
-            <img id="image-daily" src="../images/vegetarian_diet.png" alt="BMI">
+            <strong> Quick food selection </strong>
+            <img id="image-select" src="../images/quick_food_selection.png" alt="BMI">
         </div>
         
-        <div id="recipe-container" class="recipe-container"></div>
-            <!-- Recipes will be loaded here -->
+        <div class = "container2">
+            <div class="bmi-container">
+                <div class="input-row">
+                    <div class="input-container">
+                        <label for="recipe">Choose your diet</label>
+                        <select id="recipe" onchange="fetchRecipes()">
+                            <option value="None">___</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Dietary">Dietary</option>
+                            <option value="Exercise">Exercise</option>
+                        </select>   
+                    </div>
+
+                    <!-- breakfast -->
+                    <div class="input-container">
+                        <label for="recipe-titles">Breakfast</label>
+                        <select id="recipe-titles" onchange="addRecipe()">
+                            <!-- Options will be added here dynamically -->
+                        </select>
+                        <div id="selected-recipes"></div>
+                    </div>
+
+                    <!-- lunch -->
+                    <div class="input-container">
+                        <label for="recipe-titles-lunch">Lunch</label>
+                        <select id="recipe-titles-lunch" onchange="addRecipeLunch()">
+                            <!-- Options will be added here dynamically -->
+                        </select>
+                        <div id="selected-recipes-lunch"></div>
+                    </div>
+
+                    <!-- dinner -->
+                    <div class="input-container">
+                        <label for="recipe-titles-dinner">Dinner</label>
+                        <select id="recipe-titles-dinner" onchange="addRecipeDinner()">
+                            <!-- Options will be added here dynamically -->
+                        </select>
+                        <div id="selected-recipes-dinner"></div>
+                    </div>
+
+                    
+                </div>
+                <button id="estimate-btn">Result</button>
+            </div>
         </div>
+
+        <!-- Vị trí để kết quả hiển thị -->
+        <div id="recipe-details"></div>
 
         <!-- forum -->
         <img id="image-forum" src="../images/forum.png" alt="Forum">
@@ -87,6 +133,6 @@
         </div>
 
         <script src="../js/bmi.js"></script>
-        <script src="../js/vegetarian_diet.js"></script>
+        <script src="../js/select.js"></script>
     </body>
 </html>
