@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="../css/membership.css">
+        <link rel="stylesheet" href="../css/qr.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         
     </head>
@@ -50,48 +50,24 @@
             <p></p>
 
             <strong> Membership plan</strong>
+
+            <p> 
+                Please scan the QR code below and enter the correct information to complete the payment.
+            </p>
             
         </div>
         
-        <div class = "container2">
-            <img src="../images/membership80.png" alt="Membership" id="1">
-            <img src="../images/membership150.png" alt="Membership" id="2">
-            <img src="../images/membership1600.png" alt="Membership" id="3">
-        </div>
-
-        <!-- forum -->
-        <img id="image-forum" src="../images/forum.png" alt="Forum">
-        <button id = "button-forum"> GO TO FORUM</button>
-
-         <!-- information -->    
-         <div class="information">
-            <img id="logo-2" src="../images/logo.png" alt="Logo">
-        
-            <div class="info-item">
-                <strong>About us</strong>
-                <p>Contact us</p>
-                <p>Information</p>
-                <p>Rate us</p>
-                <p>Blog</p>
-            </div>
-        
-            <div class="info-item">
-                <strong>Explore</strong>
-                <p>Upload recipes</p>
-                <p>Feedback on recipes</p>
-                <p>Cooking Forum</p>
-            </div>
-        
-            <div class="info-item">
-                <strong>Policy</strong>
-                <p>Privacy Policy</p>
-                <p>Usage rules</p>
-                <p>Resolve complaints</p>
-                <p>Rules for posting recipes</p>
-            </div>
+        <div class = "containerQr">
+            <img src="../images/cake_qr.jpg" alt="Membership" id="1">
+            <p id="content"></p>
         </div>
 
         <script src="../js/bmi.js"></script>
-        <script src="../js/membership.js"></script>
+        <script>
+            // Retrieve the content from localStorage
+            const apiContent = localStorage.getItem('apiContent');
+            // Display the content in the paragraph
+            document.getElementById('content').textContent = apiContent;
+        </script>
     </body>
 </html>

@@ -166,73 +166,21 @@ body {
     font-size: 25px; /* Kích thước chữ */
     margin-bottom: 3%;
 }
-.container2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px; /* Khoảng cách giữa các ảnh */
-    justify-content: center; /* Căn giữa các ảnh */
-}
-
-.container2 img {
-    width: 30%;
-    height: auto;
-    flex: 0 0 30%; /* Đảm bảo ảnh giữ nguyên kích thước 30% */
+.containerQr {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
 }
 
 
-/* information */
-.information {
-    display: flex;
-    justify-content: space-around; /* Căn đều các mục với khoảng cách giữa */
-    align-items: flex-start; /* Căn theo trục dọc từ trên xuống */
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: 150px;
-}
-
-#logo-2 {
-    width: 100px; /* Điều chỉnh kích thước logo nếu cần */
-    height: auto;
-    margin-right: 200px; /* Khoảng cách giữa logo và các mục */
-    flex: 1;
-}
-
-.info-item {
-    flex: 4; /* Chia đều không gian giữa các mục */
-    padding: 100 10px; /* Khoảng cách bên trong giữa các item */
-}
-
-.info-item strong {
-    display: block;
-    margin-bottom: 10px; /* Tạo khoảng cách dưới phần tiêu đề */
-    text-decoration: underline;
-}
-
-.info-item p {
-    margin: 5px 0; /* Điều chỉnh khoảng cách giữa các dòng */
-}
-
-/* forum */
-#image-forum {
-    width: 30%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-#button-forum {
+.containerQr img {
     width: 20%;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    font-size: 20px;
-    border-radius: 35px;
-    background-color: #ec8a53;
-    color: #FDF4CC;
+    height: auto;
+
 }
 
-#button-forum:hover {
-    background-color: #eb6f27;
+.containerQr p {
+    margin-top: 2%;
+    font-size: 25px;
 }
-
