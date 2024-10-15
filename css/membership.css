@@ -159,6 +159,13 @@ body {
     margin-bottom: 3%;
 }
 
+.container p {
+    position: relative;
+    margin: 0px 7%;
+    color: #822F00; /* Màu chữ */
+    font-size: 25px; /* Kích thước chữ */
+    margin-bottom: 3%;
+}
 .container2 {
     display: flex;
     flex-wrap: wrap;

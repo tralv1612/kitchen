@@ -1,0 +1,262 @@
+/* sidebar */
+.sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các item theo chiều ngang */
+    background-color: #EC8A53; /* Màu nền cho sidebar */
+    color: #FDF4CC;
+    padding: 20px;
+    width: 200px; /* Chiều rộng sidebar */
+    height: 100vh; /* Chiều cao sidebar toàn màn hình */
+}
+
+.btnMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: none;
+    width: 100%;
+    height: 7%;
+    margin-top: 40px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 35px;
+}
+
+.btnMenu:hover {
+    background-color: #e0e0e0; /* Đổi màu khi hover */
+}
+
+.sidebar-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar-menu i {
+    width: 20px;
+    height: 20px;
+    margin: 10% 10% 10% 20%;
+    font-size: 20px;
+}
+
+.sidebar-menu p {
+    height: 20px;
+    display: inline-block;
+    margin-top: 5.5%;
+}
+#btnLogout {
+    margin-top: auto; /* Đẩy nút logout xuống cuối */
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#btnLogout:hover {
+    background-color: #ff3333; /* Màu hover cho nút logout */
+}
+
+
+/* details */
+.content-wrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #FFFCEF;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.total_order {
+    display: flex;
+    flex-direction: row; /* Sắp xếp các phần tử theo chiều ngang */
+    justify-content: space-between; /* Căn đều các phần tử theo chiều ngang */
+    width: 90%; /* Chiếm toàn bộ chiều rộng container */
+    height: 25%;
+    border: 2px solid #EC8A53;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    color: #FDF4CC;
+    background-color: rgba(245, 240, 234, 0.3); /* White color with 80% opacity */
+
+}
+
+.border_Status {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các nội dung trong từng phần border_Status xếp theo chiều dọc */
+    align-items: center; /* Căn giữa các nội dung */
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 10px; /* Tạo khoảng cách giữa các phần tử ngang */
+    width: 200px; /* Đặt chiều rộng cố định cho mỗi ô */
+}
+
+.btnSelect {
+    border-radius: 20px;
+    font-weight: bold; 
+    height: 80px;
+    width: 100%;
+    color: #ec711e;
+    font-size: 20px;
+}
+
+.total_circle {
+    width: 150px;
+    height: 100px;
+    border-radius: 50%; /* Tạo hình tròn */
+    background-color: #EC8A53; /* Màu nền của hình tròn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+.total_circle h4 {
+    margin: 0;
+    color: #FDF4CC;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.total_circle:hover {
+    background-color: #FF9999; /* Đổi màu khi hover */
+    transform: scale(1.1); /* Phóng to khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Tăng đổ bóng khi hover */
+}
+
+
+#line{
+    width: 50px;
+    height: 2px;
+    background-color: #FF8A00;
+}
+
+#title {
+    display: flex;
+    padding: 2% 0 2% 8%;
+    color: #212121cc;
+}
+
+#title h5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#title i {
+    font-size: 20px;
+    margin: 2px 0 0 15px;
+    color: #FF8A00;
+}
+
+/* today */
+.todayChart {
+    display: flex !important;
+    justify-content: space-between;
+    width: 90%;
+    height: 40%;
+    margin: 5%;
+    background-color: #FFFCEF;
+    border: 2px solid #EC8A53;
+    padding: 1%;
+    border-radius: 5px;
+  }
+  
+.today {
+    display: flex;
+    flex-direction: column;
+    width: 45%;  /* Adjust as needed */
+    color: #ec711e;
+    font-size: 20px;
+    margin: 2%;
+    flex: 1;
+    text-decoration: underline;
+  }
+  
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;  /* Adjust as needed */
+    flex: 5;
+    gap: 30px;
+  }
+  
+  
+
+/* charts */
+.memUser {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ec711e;
+}
+.pie-chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0% calc(var(--percentage) * 1%), 
+        #ccc calc(var(--percentage) * 1%) 100%
+    );
+    transition: background 0.3s ease;
+}
+
+.pie-chart:hover {
+    background: conic-gradient(
+        #4caf50 0% 100%,
+        #ccc 0% 0%
+    );
+}
+
+.pie-chart::before {
+    content: attr(data-percentage) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+#transaction-table-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.transaction-table th, .transaction-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.transaction-table th, .transaction-table td {
+    width: calc(100% / 8); /* Assuming there are 8 columns */
+}
+
+.transaction-table th {
+    background-color: #f2f2f2; /* Header background color */
+}
+
+.transaction-table td {
+    border-color: #EC8A53; /* Color of the table lines */
+}

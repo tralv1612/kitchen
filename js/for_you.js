@@ -10,21 +10,48 @@ document.getElementById("about-us").addEventListener("click", function() {
 document.getElementById("bmi").addEventListener("click", function() {
     window.location.href = "../pages/bmi.html";
 });
+
 //chat
 document.getElementById("chat").addEventListener("click", function() {
-    window.location.href = "../pages/chat.html";
+    var account = sessionStorage.getItem('account');
+    var user = JSON.parse(account);
+    var isMember = user.isMember;
+
+    if (isMember === false) {
+        alert("To use this feature, you'll need to become a member.")
+    }
 });
+
 //plan
 document.getElementById("plan").addEventListener("click", function() {
-    window.location.href = "../pages/plan.html";
+    var account = sessionStorage.getItem('account');
+    var user = JSON.parse(account);
+    var isMember = user.isMember;
+
+    if (isMember === true) {
+        window.location.href = "../pages/plan.html";
+    }
+    else {
+        alert("To use this feature, you'll need to become a member.")
+    }
 });
+
 //calo
 document.getElementById("calo").addEventListener("click", function() {
     window.location.href = "../pages/calo.html";
 });
 //select
 document.getElementById("select").addEventListener("click", function() {
-    window.location.href = "../pages/select.html";
+    var account = sessionStorage.getItem('account');
+    var user = JSON.parse(account);
+    var isMember = user.isMember;
+
+    if (isMember === true) {
+        window.location.href = "../pages/select.html";
+    }
+    else {
+        alert("To use this feature, you'll need to become a member.")
+    }
 });
 //cost
 document.getElementById("cost").addEventListener("click", function() {
