@@ -184,7 +184,7 @@
     justify-content: center;
     align-items: center;
     width: 45%;  /* Adjust as needed */
-    flex: 5;
+    flex: 4;
     gap: 30px;
   }
   
@@ -241,6 +241,8 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    color: #ec711e;
+    font-weight: bold;
 }
 
 .transaction-table th, .transaction-table td {

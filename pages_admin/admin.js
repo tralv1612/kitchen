@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('http://kitchenbuddy.somee.com/api/v1/dashboards', {
+    fetch('https://www.kitchenbuddy.somee.com/api/v1/dashboards', {
         method: 'GET',
         headers: {
             'Accept': 'application/json'
