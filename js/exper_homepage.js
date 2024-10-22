@@ -1,14 +1,3 @@
-document.getElementById("recipes").addEventListener("click", function() {
-    window.location.href = "../pages/recipes.html";
-});
-
-document.getElementById("about-us").addEventListener("click", function() {
-    window.location.href = "../pages/homepage.html";
-});
-
-document.getElementById("for-you").addEventListener("click", function() {
-    window.location.href = "../pages/for_you.html";
-});
 
 function togglePopup() {
     const overlay = document.getElementById('popup-overlay');
@@ -97,7 +86,7 @@ document.getElementById('btnPost').addEventListener('click', function () {
     const content = document.getElementById('content').value;
 
     // Define fixed posterId and categoryId
-    const posterId = 1;
+    const posterId = 2;
     const categoryId = 1;
 
     // Create the post object

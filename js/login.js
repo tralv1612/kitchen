@@ -67,7 +67,7 @@ async function handleLogin(event) {
             if (role === 'user') {
                 window.location.href = "../pages/homepage.html";}
             else if (role === 'expert') {
-                window.location.href = "../pages_admin/exper_homepage.html";}
+                window.location.href = "../pages/exper_homepage.html";}
             else {
                 window.location.href = "../pages_admin/admin_dashboard.html";}
         } else {
