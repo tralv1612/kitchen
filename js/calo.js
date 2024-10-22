@@ -33,3 +33,7 @@ document.getElementById('estimate-btn').addEventListener('click', function() {
         })
         .catch(error => console.error('Error fetching estimate:', error));
 });
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});

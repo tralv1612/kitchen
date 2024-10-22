@@ -10,84 +10,118 @@ document.addEventListener("DOMContentLoaded", function() {
         // Lưu dữ liệu vào session storage
         sessionStorage.setItem('dashboardData', JSON.stringify(data));
 
-        // Cập nhật nội dung DOM
         updateDashboard(data);
+        // Vẽ các biểu đồ
+        createCharts(data);
 
-        // Vẽ biểu đồ cột chỉ thể hiện % của hôm nay
-        const ctx = document.getElementById('columnChart').getContext('2d');
-        const totalData = [data.totalIncome, data.totalUser, data.totalMemberShip, data.totalTransaction];
-        const todayData = [data.totalIncomeToday, data.totalUserToday, data.totalMemberShipToday, data.totalTransactionToday];
-        const percentageData = todayData.map((value, index) => (value / totalData[index]) * 100);
-
-        const chart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Income', 'Users', 'Memberships', 'Transactions'],
-                datasets: [{
-                    label: 'Today (%)',
-                    data: percentageData,
-                    backgroundColor: 'rgba(153, 204, 255, 0.6)',
-                    borderColor: 'rgba(153, 204, 255, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,  // Giới hạn trục y ở mức 100% để mọi cột đều có chiều cao tương đương
-                        title: {
-                            display: true,
-                            text: 'Percentage (%)'
-                        }
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return `${context.raw.toFixed(2)}%`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        // Tạo bảng để show các giao dịch
-        let table = document.createElement('table');
-        table.classList.add('transaction-table');
-        let header = table.createTHead();
-        let headerRow = header.insertRow(0);
-
-        let headers = ['Username', 'ID', 'Transaction Date', 'Transaction Code', 'Price', 'Validity Period', 'Validity Days', 'Status'];
-        headers.forEach((header, index) => {
-            let cell = headerRow.insertCell(index);
-            cell.innerHTML = header;
-        });
-
-        let body = table.createTBody();
-
-        data.transactions.forEach(transaction => {
-            transaction.transactions.forEach(trans => {
-                let row = body.insertRow();
-                row.insertCell(0).innerHTML = trans.userName;
-                row.insertCell(1).innerHTML = trans.id;
-                row.insertCell(2).innerHTML = trans.transactionDate;
-                row.insertCell(3).innerHTML = trans.transactionCode;
-                row.insertCell(4).innerHTML = trans.price;
-                row.insertCell(5).innerHTML = trans.validityPeriod;
-                row.insertCell(6).innerHTML = trans.validityDays;
-                row.insertCell(7).innerHTML = trans.status;
-            });
-        });
-
-        document.getElementById('transaction-table-container').appendChild(table);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
     });
 });
+
+function createCharts(data) {
+    // Lấy dữ liệu từ transactionByDay và userByDay
+    const transactionByDaySorted = data.transactionByDay.sort((a, b) => new Date(a.date.split('-').reverse().join('-')) - new Date(b.date.split('-').reverse().join('-')));
+    const userByDaySorted = data.userByDay.sort((a, b) => new Date(a.date.split('-').reverse().join('-')) - new Date(b.date.split('-').reverse().join('-')));
+
+    const transactionDates = transactionByDaySorted.map(item => item.date);
+    const transactionTotals = transactionByDaySorted.map(item => item.transactionTotal);
+    const incomeTotals = transactionByDaySorted.map(item => item.incomeTotal);
+
+    const userDates = userByDaySorted.map(item => item.date);
+    const userTotals = userByDaySorted.map(item => parseInt(item.userTotal, 10));  // Ensure userTotal is an integer
+    const memberTotals = userByDaySorted.map(item => parseInt(item.memberTotal, 10));
+
+    // Tạo biểu đồ giao dịch
+    new Chart(document.getElementById('transactionChart'), {
+        type: 'line',
+        data: {
+            labels: transactionDates,
+            datasets: [{
+                label: 'Transactions',
+                data: transactionTotals,
+                borderColor: 'blue',
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: true },
+                title: { display: true, text: 'Transactions by Day' }
+            }
+        }
+    });
+
+    // Tạo biểu đồ người dùng
+    new Chart(document.getElementById('userChart'), {
+        type: 'line',
+        data: {
+            labels: userDates,
+            datasets: [{
+                label: 'Users',
+                data: userTotals,
+                borderColor: 'green',
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: true },
+                title: { display: true, text: 'Users by Day' }
+            }
+        }
+    });
+
+    // Tạo biểu đồ thành viên
+    new Chart(document.getElementById('memberChart'), {
+        type: 'line',
+        data: {
+            labels: userDates,
+            datasets: [{
+                label: 'Members',
+                data: memberTotals,
+                borderColor: 'orange',
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: true },
+                title: { display: true, text: 'Members by Day' }
+            }
+        }
+    });
+
+    // Tạo biểu đồ tổng thu nhập
+    new Chart(document.getElementById('incomeChart'), {
+        type: 'line',
+        data: {
+            labels: transactionDates,
+            datasets: [{
+                label: 'Income',
+                data: incomeTotals,
+                borderColor: 'red',
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: true },
+                title: { display: true, text: 'Income by Day (VND)' }
+            }
+        }
+    });
+}
+
 
 
 function formatCurrency(amount) {
@@ -99,18 +133,19 @@ function updateDashboard(data) {
     document.getElementById('totalUsers').textContent = data.totalUser;
     document.getElementById('totalMem').textContent = data.totalMemberShip;
     document.getElementById('totalTrans').textContent = data.totalTransaction;
-    document.getElementById('todayRevenue').textContent = "Today's revenue: " + data.totalIncomeToday;
-    document.getElementById('todayTrans').textContent = "Today's Transaction: " + data.totalTransactionToday;
-    document.getElementById('todayUsers').textContent = "New Users: " + data.totalUserToday;
-    document.getElementById('todayMembers').textContent = "New Memberships: " + data.totalMemberShipToday;
 }
 
 document.getElementById('btnLogout').addEventListener('click', function () {
     window.location.href = '../login.html';
 })
 document.getElementById('btnOrder').addEventListener('click', function () {
-    window.location.href = '../page_admin/admin_orders.html';
+    window.location.href = '../pages_admin/transaction.html';
 })
+
 document.getElementById('btnNotify').addEventListener('click', function () {
-    window.location.href = '../page_admin/admin_dashboard.html';
+    window.location.href = '../pages_admin/admin_dashboard.html';
+})
+
+document.getElementById('btnUser').addEventListener('click', function () {
+    window.location.href = '../pages_admin/user.html';
 })

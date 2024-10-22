@@ -1,0 +1,235 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fffcef;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+/* CSS for Navbar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ec8a53;
+    height: 120px;
+}
+
+#logo {
+    width: 180px; /* Tùy chỉnh kích thước logo */
+    height: auto;
+    padding-left: 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin-left: 70px;
+    padding: 0;
+    color: white;
+}
+
+.nav-item {
+    margin-right: 80px; /* Khoảng cách giữa các mục menu */
+    font-size: 18px; /* Kích thước chữ tùy chỉnh */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 0 10px; /* Optional: Add some padding for better spacing */
+    height: 120px;
+}
+
+.nav-item:hover {
+    text-decoration: underline; /* Hiệu ứng hover */
+    background-color: #683131;
+}
+
+
+
+#square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 136px; /* Kích thước của hình vuông */
+    height: 120px;
+    
+    margin-right: 20px;
+}
+
+#square:hover {
+    background-color: #FDF4CC; /* Màu nền của hình vuông */
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px; /* Kích thước của hình tròn */
+    height: 87px;
+    background-color: #822f00; /* Màu nền của hình tròn */
+    border-radius: 50%;
+}
+
+/* Pop-up styles */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 244, 244, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    top: 120px;
+    right: 10px;
+}
+
+#popup ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#popup ul li {
+    margin: 10px 0;
+}
+
+#popup ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+/* Hide pop-up by default */
+.hidden {
+    display: none !important;
+}
+
+.fas {
+    font-size: 50px; /* Kích thước của icon */
+    color: white; /* Màu của icon */
+}
+
+/* Daily diet */
+/* CSS cho phần nội dung bên dưới navbar */
+.container {
+    margin-top: 100px; /* Khoảng cách từ phần navbar phía trên */
+    display: flex;
+    flex-direction: column; /* Đảm bảo các thẻ con xếp theo cột */
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+}
+
+.back-icon {
+    display: flex;
+    justify-content: center; /* Đặt icon vào giữa thẻ i */
+    align-items: center; /* Căn chỉnh icon theo chiều dọc */
+
+    font-size: 24px;
+    color: #FDF4CC;
+    background-color: #ec8a53;
+    width: 100px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    border-radius: 30px;
+}
+
+.back-icon:hover {
+    background-color: #eb6f27;
+}
+
+.container strong {
+    position: relative;
+    left: 7%;
+    color: #822F00; /* Màu chữ */
+    font-size: 40px; /* Kích thước chữ */
+    margin-bottom: 3%;
+}
+
+#image-daily {
+    display: block;
+    width: 86%;
+    margin: 0 auto; /* Đặt ảnh vào giữa màn hình */
+}
+
+/* articles detail */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Chia đều khoảng cách giữa các card */
+    gap: 20px; /* Khoảng cách giữa các card */
+    padding: 20px;
+    margin: 5%;
+}
+
+.article-card {
+    flex: 1 1 30%; /* Chiếm 30% chiều rộng, có thể thu nhỏ hoặc giãn rộng */
+    max-width: 30%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.article-card img.article-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.article-title {
+    color: #822F00;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.article-description {
+    color: #822F00;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* information */
+.information {
+    display: flex;
+    justify-content: space-around; /* Căn đều các mục với khoảng cách giữa */
+    align-items: flex-start; /* Căn theo trục dọc từ trên xuống */
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+#logo-2 {
+    width: 100px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+    margin-right: 200px; /* Khoảng cách giữa logo và các mục */
+    flex: 1;
+}
+
+.info-item {
+    flex: 4; /* Chia đều không gian giữa các mục */
+    padding: 100 10px; /* Khoảng cách bên trong giữa các item */
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 10px; /* Tạo khoảng cách dưới phần tiêu đề */
+    text-decoration: underline;
+}
+
+.info-item p {
+    margin: 5px 0; /* Điều chỉnh khoảng cách giữa các dòng */
+}

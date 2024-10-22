@@ -112,3 +112,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
         alert('An error occurred while submitting the meal plan.');
     });
 });
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});

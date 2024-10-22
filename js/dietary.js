@@ -59,3 +59,7 @@ function displayRecipes(recipes) {
         recipeContainer.appendChild(recipeCard);
     });
 }
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});

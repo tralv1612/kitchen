@@ -35,3 +35,7 @@ document.getElementById("dietary").addEventListener("click", function() {
 document.getElementById("excercise-diet").addEventListener("click", function() {
     window.location.href = "excercise_diet.html";
 });
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});

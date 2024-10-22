@@ -70,3 +70,7 @@ window.onclick = function(event) {
         overlay.classList.add('hidden');
     }
 };
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});

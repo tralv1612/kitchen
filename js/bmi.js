@@ -79,3 +79,7 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
         </div>
     `;
 });
+
+document.getElementById("button-forum").addEventListener("click", function() {
+    window.location.href = "../pages/forum.html";
+});
