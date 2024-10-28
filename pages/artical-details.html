@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipes</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/recipes.css">
+        <link rel="stylesheet" href="../css/artical-details.css">
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="nav">
+            <img id="logo" src="../images/logo.png" alt="Logo">
+            
+
+            <ul class="nav-list">
+                <li class="nav-item" id = "about-us">About us</li>
+                <li class="nav-item" id = "recipes">Recipes</li>
+                <li class="nav-item" id = "for-you">For you</li>
+                <li class="nav-item" id ="your-tree">Check your tree</li>
+            </ul>
+
+            <div id="square" onclick="togglePopup()">
+                <div class="circle">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <div id="popup-overlay" class="hidden">
+                <div id="popup">
+                    <ul>
+                        <li><a href="#">View Profile</a></li>
+                        <li><a href="../pages/membership.html">Membership</a></li>
+                        <li><a href="../pages/login.html">Log out</a></li>
+                        <li><a href="../pages/change-ps.html">Change password</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a onclick="history.back()" class="back-icon">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <div id="post-details"></div>
+
+
+         <!-- information -->    
+         <div class="information">
+            <img id="logo-2" src="../images/logo.png" alt="Logo">
+        
+            <div class="info-item">
+                <strong>About us</strong>
+                <p>Contact us</p>
+                <p>Information</p>
+                <p>Rate us</p>
+                <p>Blog</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Explore</strong>
+                <p>Upload recipes</p>
+                <p>Feedback on recipes</p>
+                <p>Cooking Forum</p>
+            </div>
+        
+            <div class="info-item">
+                <strong>Policy</strong>
+                <p>Privacy Policy</p>
+                <p>Usage rules</p>
+                <p>Resolve complaints</p>
+                <p>Rules for posting recipes</p>
+            </div>
+        </div>
+
+        <script>
+            // Function to get articleId from URL
+            function getArticleIdFromURL() {
+              const params = new URLSearchParams(window.location.search);
+              return params.get('articleId');
+            }
+            
+            // Function to get post details by articleId from session storage
+            function getPostDetails(articleId) {
+              const posts = JSON.parse(sessionStorage.getItem('post'));
+              if (posts) {
+                const post = posts.find(post => post.postId == articleId);
+                if (post) {
+                  displayPostDetails(post);
+                } else {
+                  console.error('Post not found in session storage');
+                }
+              } else {
+                console.error('No posts found in session storage');
+              }
+            }
+          
+            // Function to display post details
+            function displayPostDetails(post) {
+              const detailsContainer = document.getElementById('post-details');
+              detailsContainer.innerHTML = ''; // Clear previous content
+          
+              // Add title
+              const title = document.createElement('h2');
+              title.textContent = post.title;
+              detailsContainer.appendChild(title);
+          
+              // Add image
+              const img = document.createElement('img');
+              img.src = post.imageUrl || '../images/logo.png';
+              img.alt = post.title;
+              img.style.width = '100%';
+              detailsContainer.appendChild(img);
+          
+              // Add content
+              const content = document.createElement('p');
+              content.textContent = post.content;
+              detailsContainer.appendChild(content);
+            }
+          
+            // Get articleId from URL and fetch post details from session storage
+            const articleId = getArticleIdFromURL();
+            if (articleId) {
+              getPostDetails(articleId);
+            } else {
+              console.error('No articleId found in URL');
+            }
+          </script>
+          
+          
+        <script src="../js/recipes.js"></script>
+    /body>
+</html>
+        

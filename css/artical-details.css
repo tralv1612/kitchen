@@ -1,0 +1,66 @@
+.back-icon {
+    display: flex;
+    justify-content: center; /* Đặt icon vào giữa thẻ i */
+    align-items: center; /* Căn chỉnh icon theo chiều dọc */
+
+    font-size: 24px;
+    color: #FDF4CC;
+    background-color: #ec8a53;
+    width: 100px;
+    margin: 2% 0 2% 5%;
+    border-radius: 30px;
+}
+
+.back-icon:hover {
+    background-color: #eb6f27;
+}
+
+
+
+#post-details {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 60%;
+    border-radius: 20px;
+   
+}
+
+#post-details img {
+    width: 50% !important;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    margin: 20px auto ;
+}
+
+#post-details h2 {
+    color: #822F00;
+    margin-bottom: 20px;
+}
+
+#post-details h3 {
+    color: #9E3D07;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#post-details p {
+    color: #9E3D07;
+    font-size: 1.2em;
+    margin: 10px 20px;
+}
+
+#post-details ul {
+    list-style-type: disc;
+    margin-top: 10px;
+    padding-left: 20px;
+    
+}
+
+#post-details li {
+    margin-bottom: 5px;
+    color: #9E3D07;
+    font-size: 1.2em;
+}

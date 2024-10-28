@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchArticles() {
-    fetch('https://www.kitchenbuddy.somee.com/api/v1/posts?category=Kitchen', {
+    fetch('https://www.kitchenbuddy.somee.com/api/v1/forum?category=Kitchen', {
         method: 'GET',
         headers: {
             'accept': '*/*'
@@ -69,7 +69,7 @@ function displayArticles(articles) {
         articleCard.appendChild(img);
         articleCard.appendChild(title);
 
-        if (article.category === "Kitchen Story") {
+        if (article.isExpert === true) {
             // Create a container for the expert badge
             const expertBadge = document.createElement('p');
             expertBadge.innerHTML = '⭐ <strong>Post by an Expert</strong>'; // Yellow star and text
@@ -82,7 +82,7 @@ function displayArticles(articles) {
         // Add event listener for clicking on the article card
         articleCard.addEventListener('click', () => {
             const articleId = articleCard.dataset.articleId;
-            window.location.href = `article-details.html?articleId=${articleId}`;
+            window.location.href = `../article-details.html?articleId=${articleId}`;
         });
 
         // Append article card to the container
@@ -109,7 +109,7 @@ document.getElementById('btnPost').addEventListener('click', function () {
     };
 
     // Call the API using fetch
-    fetch('https://www.kitchenbuddy.somee.com/api/v1/posts/create', {
+    fetch('https://www.kitchenbuddy.somee.com/api/v1/forum/create?type=User', {
         method: 'POST',
         headers: {
             'accept': '*/*',

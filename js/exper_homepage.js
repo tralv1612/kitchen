@@ -17,20 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchArticles();
 });
 
-function fetchArticles() {
-    fetch('https://www.kitchenbuddy.somee.com/api/v1/posts?category=Kitchen', {
+async function fetchArticles() {
+    const response = await fetch('https://www.kitchenbuddy.somee.com/api/v1/forum?category=Kitchen', {
         method: 'GET',
         headers: {
             'accept': '*/*'
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-        displayArticles(data);
-    })
-    .catch(error => {
-        console.error('Error fetching articles:', error);
     });
+    const data = await response.json();
+    sessionStorage.setItem('post', JSON.stringify(data));
+    displayArticles(data);
+
 }
 
 function displayArticles(articles) {
@@ -58,7 +55,7 @@ function displayArticles(articles) {
         articleCard.appendChild(img);
         articleCard.appendChild(title);
 
-        if (article.category === "Kitchen Story") {
+        if (article.isExpert === true) {
             // Create a container for the expert badge
             const expertBadge = document.createElement('p');
             expertBadge.innerHTML = '⭐ <strong>Post by an Expert</strong>'; // Yellow star and text
@@ -71,7 +68,7 @@ function displayArticles(articles) {
         // Add event listener for clicking on the article card
         articleCard.addEventListener('click', () => {
             const articleId = articleCard.dataset.articleId;
-            window.location.href = `article-details.html?articleId=${articleId}`;
+            window.location.href = `artical-details.html?articleId=${articleId}`;
         });
 
         // Append article card to the container
@@ -86,7 +83,7 @@ document.getElementById('btnPost').addEventListener('click', function () {
     const content = document.getElementById('content').value;
 
     // Define fixed posterId and categoryId
-    const posterId = 2;
+    const posterId = 5;
     const categoryId = 1;
 
     // Create the post object
@@ -98,7 +95,7 @@ document.getElementById('btnPost').addEventListener('click', function () {
     };
 
     // Call the API using fetch
-    fetch('https://www.kitchenbuddy.somee.com/api/v1/posts/create', {
+    fetch('https://www.kitchenbuddy.somee.com/api/v1/forum/create?type=Expert', {
         method: 'POST',
         headers: {
             'accept': '*/*',
