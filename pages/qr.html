@@ -59,30 +59,9 @@
         
         <div class = "containerQr">
             <img src="../images/cake_qr.jpg" alt="Membership" id="1">
-            <p id="content"></p>
+            <p id="content">Member-463728</p>
         </div>
 
         <script src="../js/bmi.js"></script>
-        <script>
-            // Retrieve the content from localStorage
-            const apiContent = localStorage.getItem('apiContent');
-            // Display the content in the paragraph
-            document.getElementById('content').textContent = apiContent;
-
-            setTimeout(function() {
-                            location.href = "../pages/homepage.html";
-                        }, 80000);
-
-
-            let account = JSON.parse(sessionStorage.getItem('account'));
-            if (account) {
-                account.isMember = true; // Set ismember to true
-                sessionStorage.setItem('account', JSON.stringify(account));
-                console.log('Membership updated:', account);
-            } else {
-                console.log('No account found in sessionStorage');
-            }
-
-        </script>
     </body>
 </html>

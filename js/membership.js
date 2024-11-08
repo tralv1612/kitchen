@@ -20,32 +20,8 @@ document.querySelectorAll('.container2 img').forEach(img => {
     img.addEventListener('click', async function () {
         const membershipId = this.id;
         const apiUrl = 'https://www.kitchenbuddy.somee.com/api/v1/transactions/add?type=Cake';
-        const payload = {
-            userId: userId,
-            membershipId: parseInt(membershipId)
-        };
-    
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Accept': '*/*',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-    
-            const data = await response.json();
-            console.log(data);
-    
-            // Store data.content in localStorage
-            localStorage.setItem('apiContent', data.content);
-    
             // Redirect to qr.html
             window.location.href = 'qr.html';
-        } catch (error) {
-            console.error('Error:', error);
-        }
     });
     
 });
